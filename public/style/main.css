@@ -1,0 +1,44 @@
+body {
+  font: helvetica, non-serif;
+}
+
+h1 {
+  font: helvetica, non-serif;
+  font-size: 2rem;
+}
+
+form {
+  background: #000;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+form input {
+  border: 0;
+  padding: 1rem;
+  width: 85%;
+  margin-right: .5%;
+}
+
+form button {
+  width: 10%;
+  background: rgb(130, 224, 225);
+  border: none;
+  padding: 1rem;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#messages li {
+  padding: 3rem 6rem;
+}
+
+#messages li:nth-child(odd) {
+  background: #eee;
+}

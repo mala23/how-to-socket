@@ -1,8 +1,16 @@
 extends layout
 
 block head
-  script(src = "/socket.io/socket.io.js")
-  script(src = "js/chat.js")
+  script(src = '/socket.io/socket.io.js')
+  script(src = 'js/jquery.js')
+  //script(src = 'js/chat.js')
 
 block content
-  h1 Hello world!
+  head
+    h1 IOgram
+    h2 a realtime chat based on Socket.io
+  main
+    section#messages
+    form(action = "")
+      input#message(autocomplete = "off", placeholder = "Say something...")
+      button Send

@@ -10,9 +10,11 @@ server.get('/', function(req, res){
 });
 
 io.on('connection', function(socket){
-  console.log('a user connected');
-  socket.on('disconnect', function(socket){
-    console.log('a user disconnected');
+  socket.on('chat message', function(msg){
+    io.emit('chat message', 'message: '  + msg);
+  });
+  socket.on('connection', function(socket){
+    io.emit('a user connected');
   });
 });
 
