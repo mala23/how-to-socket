@@ -1,9 +1,8 @@
 extends layout
 
 block head
+  script(src = "/socket.io/socket.io.js")
+  script(src = "js/chat.js")
 
 block content
   h1 Hello world!
-  script(src = "/socket.io/socket.io.js")
-  script
-    var socket * io();
