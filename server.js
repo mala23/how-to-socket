@@ -11,6 +11,9 @@ server.get('/', function(req, res){
 
 io.on('connection', function(socket){
   console.log('a user connected');
+  socket.on('disconnect', function(socket){
+    console.log('a user disconnected');
+  });
 });
 
 http.listen(1337, function(){
